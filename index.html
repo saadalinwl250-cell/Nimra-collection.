@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>NIMRA COLLECTION - Home</title>
+    <link rel="stylesheet" href="index.css">
+</head>
+<body>
+
+    <!-- Welcome Screen / SplashScreen -->
+    <div id="welcome-screen">
+        <div class="welcome-content">
+            <h1>Welcome to <br><span>NIMRA COLLECTION👜</span></h1>
+            <p>Your One-Stop Shop for Premium Accessories, Jewelry & Watches!</p>
+            <button id="enter-store-btn">Explore Store</button>
+        </div>
+    </div>
+
+    <!-- Sticky Header Navigation -->
+    <header class="sticky-header">
+        <div class="logo"><a href="index.html">🛒NIMRA COLLECTION</a></div>
+        <nav>
+            <ul>
+                <li><a href="index.html" class="active">🏠Home</a></li>
+                <li><a href="mobile-accessories.html">📱Mobile Accessories</a></li>
+                <li><a href="jwelery.html">💍Jewelry</a></li>
+                <li><a href="watches.html">⌚Watches</a></li>
+                <li><a href="all-products.html"></a></li>
+            </ul>
+        </nav>
+        <div class="cart-icon" id="cart-btn">
+            🛒 Cart (<span id="cart-count">0</span>)
+        </div>
+    </header>
+    <!-- Header Ke Bilkul Neeche Yeh Banner Section Ddaalein -->
+    <section class="hero-section">
+        <div class="hero-content">
+            <h1>Welcome to NIMRA COLLECTION</h1>
+            <p>Discover Luxury Watches, Artificial Jewelry & Premium Mobile Accessories</p>
+            <a href="hero.png" class="shop-now-btn">Shop Collection</a>
+            
+        </div>
+    </section>
+
+    <!-- Main Categories Section (Clickable Images & Cards) -->
+    <section class="products-section">
+        <h2>Featured Categories</h2>
+        <div class="product-grid">
+
+            <!-- Mobile Accessories Category Card -->
+            <a href="mobile-accessories.html" class="category-link">
+                <div class="product-card">
+                    <!-- APNI MOBILE IMAGE KA NAAM / PATH 'src' MEIN LAGAYEIN -->
+                    <img src="glas.png" alt="Mobile Accessories">
+                    <h3>Mobile Accessories</h3>
+                    <p class="price">Explore Collection &rarr;</p>
+                </div>
+            </a>
+
+            <!-- Jewelry Category Card -->
+            <a href="jwelery.html" class="category-link">
+                <div class="product-card">
+                    <!-- APNI JEWELRY IMAGE KA NAAM / PATH 'src' MEIN LAGAYEIN -->
+                    <img src="jwery.png" alt="Jewelry Collection">
+                    <h3>Jewelry Collection</h3>
+                    <p class="price">Explore Collection &rarr;</p>
+                </div>
+            </a>
+
+            <!-- Watches Category Card -->
+            <a href="watches.html" class="category-link">
+                <div class="product-card">
+                    <!-- APNI WATCH IMAGE KA NAAM / PATH 'src' MEIN LAGAYEIN -->
+                    <img src="watch.jpg" alt="Luxury Watches">
+                    <h3>Luxury Watches</h3>
+                    <p class="price">Explore Collection &rarr;</p>
+                </div>
+            </a>
+
+        </div>
+    </section>
+
+    <!-- Order Checkout Modal -->
+    <div id="checkout-modal" class="modal">
+        <div class="modal-content">
+            <span class="close-btn" id="close-modal">&times;</span>
+            <h2>Confirm Order (COD)</h2>
+            <div id="cart-items-list"></div>
+            <p class="total-price-text">Total: PKR <span id="cart-total">0</span></p>
+
+            <form id="order-form">
+                <label for="name">Full Name</label>
+                <input type="text" id="name" placeholder="Enter full name" required>
+
+                <label for="phone">Phone Number (WhatsApp)</label>
+                <input type="tel" id="phone" placeholder="0300 1234567" required>
+
+                <label for="address">Delivery Address</label>
+                <textarea id="address" placeholder="Complete Address & City" rows="3" required></textarea>
+
+                <button type="submit" class="submit-order-btn">Send Order via WhatsApp</button>
+            </form>
+        </div>
+    </div>
+
+  <footer>
+    <div class="footer-container">
+        <div class="footer-brand">
+            <h3>NIMRA COLLECTION👜</h3>
+            <p>Your Premium Destination for Accessories, Jewelry & Watches</p>
+        </div>
+
+        <div class="footer-info">
+            <div class="footer-info-item">
+                📍 <strong>Address:</strong> Narowal city
+            </div>
+            <div class="footer-info-item">
+                📞 <strong>WhatsApp:</strong> +92 3495534491
+            </div>
+            <div class="footer-info-item">
+                🚚 <strong>Delivery:</strong> 💸half payment on advance Delivery (All Pakistan)
+            </div>
+        </div>
+
+        <div class="footer-bottom">
+            <p>&copy; 2026 NIMRA COLLECTION. All rights reserved👍.</p>
+        </div>
+    </div>
+</footer>
+
+    <script src="index.js"></script>
+</body>
+</html>
