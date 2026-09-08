@@ -1,4 +1,3 @@
-/* Reset & Styling */
 * {
     margin: 0;
     padding: 0;
@@ -8,147 +7,294 @@
 
 body {
     background-color: #0f172a;
-    color: #f8fafc;
-    line-height: 1.6;
+    color: #ffffff;
 }
 
-/* Header & Nav */
+/* Welcome Screen */
+#welcome-screen {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(135deg, #0f172a 0%, #1e293b 100%);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 9999;
+    text-align: center;
+    padding: 20px;
+}
+
+.welcome-content {
+    background: rgba(255, 255, 255, 0.05);
+    padding: 40px 30px;
+    border-radius: 15px;
+    border: 1px solid rgba(243, 156, 18, 0.3);
+    box-shadow: 0 10px 30px rgba(0,0,0,0.5);
+    max-width: 450px;
+}
+
+.welcome-content h1 {
+    font-size: 32px;
+    color: #ffffff;
+    margin-bottom: 15px;
+}
+
+.welcome-content h1 span {
+    color: #f39c12;
+    font-size: 36px;
+}
+
+.welcome-content p {
+    color: #cbd5e1;
+    margin-bottom: 25px;
+}
+
+#enter-store-btn {
+    background-color: #f39c12;
+    color: #000;
+    font-size: 18px;
+    font-weight: bold;
+    padding: 12px 35px;
+    border: none;
+    border-radius: 30px;
+    cursor: pointer;
+}
+
+/* Sticky Header */
 .sticky-header {
     position: sticky;
     top: 0;
-    z-index: 1000;
     background-color: #1e293b;
-    border-bottom: 2px solid #334155;
-    padding: 12px 20px;
     display: flex;
     justify-content: space-between;
     align-items: center;
+    padding: 15px 5%;
+    z-index: 1000;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.3);
 }
 
 .logo a {
-    color: #f59e0b;
-    font-size: 1.4rem;
+    color: #f39c12;
+    font-size: 24px;
     font-weight: bold;
     text-decoration: none;
-    letter-spacing: 1px;
 }
 
 nav ul {
     display: flex;
     list-style: none;
-    gap: 15px;
+    gap: 20px;
 }
 
 nav ul li a {
     color: #cbd5e1;
     text-decoration: none;
-    font-size: 0.95rem;
+    font-size: 16px;
     font-weight: 500;
 }
 
-nav ul li a:hover, nav ul li a.active {
-    color: #f59e0b;
+nav ul li a.active, nav ul li a:hover {
+    color: #f39c12;
 }
 
 .cart-icon {
-    background-color: #f59e0b;
-    color: #0f172a;
-    padding: 8px 14px;
+    background-color: #f39c12;
+    color: #000;
+    padding: 8px 15px;
     border-radius: 20px;
     font-weight: bold;
     cursor: pointer;
 }
 
-/* Hero Section */
-
-
-.hero-content h1 {
-    font-size: 2.5rem;
-    color: #f59e0b;
-    margin-bottom: 10px;
+/* Category & Product Cards */
+.products-section {
+    padding: 40px 5%;
+    text-align: center;
 }
 
-.hero-content p {
-    font-size: 1.2rem;
-    color: #cbd5e1;
-    margin-bottom: 20px;
+.products-section h2 {
+    font-size: 28px;
+    margin-bottom: 30px;
+    color: #f39c12;
+    margin-left: -47px ;
 }
 
-.shop-now-btn {
-    display: inline-block;
-    padding: 10px 25px;
-    background-color: #f59e0b;
-    color: #0f172a;
-    font-weight: bold;
+.product-grid {
+   display: flex;
+   justify-content: center;
+   flex-wrap: wrap;
+   gap: 20px;
+   max-width: 1200px;
+   margin: 0% auto;
+}
+
+.category-link {
     text-decoration: none;
-    border-radius: 6px;
+    color: inherit;
 }
 
-/* Product & Category Grids */
-.products-section, .categories-section {
-    padding: 20px;
-    max-width: 1200px;
-    margin: 0 auto;
-}
-
-.products-section h2, .categories-section h2 {
-    text-align: center;
-    color: #f59e0b;
-    margin-bottom: 25px;
-    font-size: 2rem;
-}
-
-.product-grid, .category-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-    gap: 20px;
-}
-
-.product-card, .category-card {
+.product-card {
     background-color: #1e293b;
-    border: 1px solid #334155;
-    border-radius: 10px;
-    padding: 15px;
+    border-radius: 12px;
+    padding: 20px;
     text-align: center;
+    transition: transform 0.3s;
+    border: 1px solid #334155;
+   
 }
 
-.product-card img, .category-card img {
+
+
+.product-card:hover {
+    transform: translateY(-5px);
+}
+
+.product-card img {
     width: 100%;
-    height: 180px;
-    object-fit: contain;
+    height: 220px; /* Watches jitni exact height */
+    object-fit: contain; /* Picture bilkul saaf fit aayegi, kat-egi nahi */
+    background-color: #0f172a; /* Card frame se matching background */
     border-radius: 8px;
-    background-color: #0f172a;
-    padding: 10px;
     margin-bottom: 15px;
 }
+   
 
-.product-card h3, .category-card h3 {
-    font-size: 1.1rem;
-    color: #f8fafc;
+.product-card h3 {
+    font-size: 20px;
     margin-bottom: 10px;
 }
 
 .price {
-    font-size: 1.2rem;
+    color: #f39c12;
+    font-size: 18px;
     font-weight: bold;
-    color: #f59e0b;
     margin-bottom: 15px;
 }
 
-.add-to-cart-btn, .explore-btn {
-    width: 100%;
-    padding: 10px;
-    background-color: #f59e0b;
-    color: #0f172a;
+.add-to-cart-btn {
+    background-color: #f39c12;
+    color: #000;
     border: none;
-    border-radius: 6px;
+    padding: 10px 20px;
+    border-radius: 5px;
     font-weight: bold;
     cursor: pointer;
-    text-decoration: none;
-    display: inline-block;
+    width: 100%;
 }
 
-/* Footer Styling */
+/* Modal Popup */
+.modal {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0,0,0,0.8);
+    z-index: 2000;
+    justify-content: center;
+    align-items: center;
+}
+
+.modal-content {
+    background-color: #1e293b;
+    padding: 30px;
+    border-radius: 12px;
+    width: 90%;
+    max-width: 450px;
+    position: relative;
+}
+
+.close-btn {
+    position: absolute;
+    top: 15px;
+    right: 20px;
+    font-size: 25px;
+    cursor: pointer;
+    color: #cbd5e1;
+}
+
+form label {
+    display: block;
+    margin-top: 10px;
+    font-size: 14px;
+    color: #cbd5e1;
+    text-align: left;
+}
+
+form input, form textarea {
+    width: 100%;
+    padding: 10px;
+    margin-top: 5px;
+    border-radius: 6px;
+    border: 1px solid #334155;
+    background-color: #0f172a;
+    color: #fff;
+}
+
+.submit-order-btn {
+    background-color: #25d366;
+    color: #fff;
+    border: none;
+    padding: 12px;
+    border-radius: 6px;
+    font-weight: bold;
+    width: 100%;
+    margin-top: 15px;
+    cursor: pointer;
+}
+
+footer {
+    background-color: #1e293b;
+    text-align: center;
+    padding: 20px;
+    margin-top: 40px;
+    color: #cbd5e1;
+}
+/* .product-mk{
+    background-color: #1e293b;
+    border-radius: 12px;
+    padding: 10px;
+    text-align: center;
+    transition: transform 0.3s;
+    border: 1px solid #334155
+} */
+ /* Hero Banner Styling */
+.hero-section {
+    background: linear-gradient(rgba(15, 23, 42, 0.7), rgba(15, 23, 42, 0.7)), url('shoping.png') no-repeat center center/cover;
+    height: 320px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    color: #ffffff;
+    margin-bottom: 30px;
+}
+
+.hero-content h1 {
+    font-size: 2.2rem;
+    margin-bottom: 10px;
+    color: #f59e0b;
+}
+
+.hero-content p {
+    font-size: 1.1rem;
+    margin-bottom: 20px;
+    color: #cbd5e1;
+}
+
+.shop-now-btn {
+    display: inline-block;
+    padding: 10px 22px;
+    background-color: #f59e0b;
+    color: #0f172a;
+    font-weight: bold;
+    text-decoration: none;
+    border-radius: 6px;
+}
+/* Stylish Professional Footer */
 footer {
     background: linear-gradient(180deg, #1e293b 0%, #0f172a 100%);
     border-top: 2px solid #f59e0b;
@@ -166,6 +312,7 @@ footer {
 .footer-brand h3 {
     color: #f59e0b;
     font-size: 1.5rem;
+    letter-spacing: 1px;
     margin-bottom: 8px;
 }
 
@@ -200,36 +347,7 @@ footer {
     color: #64748b;
     border-top: 1px solid #334155;
     padding-top: 15px;
-} 
-/* Modal Pop-up Hide & Style Fix */
-.modal {
-    display: none; /* Modal ko default hide rakhne ke liye */
-    position: fixed;
-    z-index: 2000;
-    left: 0;
-    top: 0;
-    width: 100%;
-    height: 100%;
-    background-color: rgba(0, 0, 0, 0.7);
-    overflow: auto;
 }
 
-.modal-content {
-    background-color: #1e293b;
-    margin: 10% auto;
-    padding: 20px;
-    border: 1px solid #f59e0b;
-    border-radius: 10px;
-    width: 90%;
-    max-width: 500px;
-    color: #ffffff;
-    position: relative;
-}
 
-.close-btn {
-    color: #f59e0b;
-    float: right;
-    font-size: 28px;
-    font-weight: bold;
-    cursor: pointer;
-}
+
